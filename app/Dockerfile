@@ -7,6 +7,7 @@ COPY . /service
 RUN pip install -r requirements.txt
 
 ENV FLASK_APP=src/api.py
+ENV COMPLEMENTO=Teste
 EXPOSE 5000
 
 ENTRYPOINT ["sh", "-c" ,"flask run --host=0.0.0.0"]
