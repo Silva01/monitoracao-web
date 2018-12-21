@@ -149,7 +149,7 @@ monitoracao: ## Exeutar localmente o monitoramento via docker
 monitoracao_testa_build: ## Será que o container do monitoramento está ok?
 	make monitoracao_build
 	@$(call msg_warn,"Testando o container do monitoracao...")
-	@sleep 1; docker run -it --rm -e "COMPLEMENTO=Muito" docker-monitoracao:$(shell cat .version) | grep -q "Eu Amo o Madeira  Muito" && \
+	@sleep 1; docker run -it --rm -e "COMPLEMENTO=Fala do Rodrigo" docker-monitoracao:$(shell cat .version) curl http://35.232.227.161:8090/ | grep "Eu Amo o Madeira Fala do Rodrigo" && \
 		echo -e "\t$(GREEN_COLOR)Controlador  = OK $(NO_COLOR) " || \
  		echo -e "\t$(RED_COLOR)Controlador  = NOK $(NO_COLOR) "
 
