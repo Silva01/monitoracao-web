@@ -98,7 +98,6 @@ git_enviar: ## Enviar para o git
 	@clear
 	@$(call msg_warn,"Enviando para git...")
 	make git_trazer
-	make monitoracao_testa_build
 	@$(call msg_warn,"Adcionando nova versao e dando o commit...")
 	@$(shell tools/versiona.sh)
 	@$(call msg_ok,"Nova versão")
